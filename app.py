@@ -62,7 +62,7 @@ st.title("JO Paris 2024 - Analyse des Données Olympiques")
 st.sidebar.title("Navigation")
 
 # Ajout de l'image des JO 2024 dans la sidebar
-st.sidebar.image("images.jpg", use_column_width=True)
+st.sidebar.image("images.jpg", use_container_width=True)
 
 page = st.sidebar.radio(
     "Choisissez une page", 
@@ -87,47 +87,43 @@ def load_image(image_path):
 if page == "Vue Globale":
     st.header("Vue Globale")
     
-    st.image(load_image("top_12_pays_medailles.png"))
-    st.image(load_image("repartition_type_medal.png"))
-    st.image(load_image("top_10_disciplines_athletes.png"))
-    st.image(load_image("top_10_lieux.png"))
-    
-
+    st.image(load_image("top_12_pays_medailles.png"), use_container_width=True)
+    st.image(load_image("repartition_type_medal.png"), use_container_width=True)
+    st.image(load_image("top_10_disciplines_athletes.png"), use_container_width=True)
+    st.image(load_image("top_10_lieux.png"), use_container_width=True)
 
 # Page Âge
 elif page == "Âge":
     st.header("Analyse par Âge")
     
-    st.image(load_image("repartition_age_medal.png"))
-    st.image(load_image("repartition_age_athlete.png"))
-    st.image(load_image("perf_medaille_tranche_age.png"))
-    st.image(load_image("age_moyen_medal.png"))
-    st.image(load_image("age_moyen_athlete.png"))
+    st.image(load_image("repartition_age_medal.png"), use_container_width=True)
+    st.image(load_image("repartition_age_athlete.png"), use_container_width=True)
+    st.image(load_image("perf_medaille_tranche_age.png"), use_container_width=True)
+    st.image(load_image("age_moyen_medal.png"), use_container_width=True)
+    st.image(load_image("age_moyen_athlete.png"), use_container_width=True)
 
 # Page Nombre d'athlètes envoyés
 elif page == "Nombre d'athlètes envoyés":
     st.header("Nombre d'athlètes envoyés")
 
-    st.image(load_image("carte_athlete.png"))    
-    st.image(load_image("top_12_pays_taux_conv.png"))
-    st.image(load_image("nombre_athlete_continent.png"))
-
+    st.image(load_image("carte_athlete.png"), use_container_width=True)
+    st.image(load_image("top_12_pays_taux_conv.png"), use_container_width=True)
+    st.image(load_image("nombre_athlete_continent.png"), use_container_width=True)
 
 # Page Répartition des athlètes
 elif page == "Répartition des athlètes":
     st.header("Répartition des athlètes")
-    
 
-    st.image(load_image("repartition_male_female.png"))
-    st.image(load_image("top_10_coach.png"))
-    st.image(load_image("top_5_disciplines.png"))
-    st.image(load_image("top_-5_disciplines.png"))
-    st.image(load_image("heatmap_athlete.png"))    
+    st.image(load_image("repartition_male_female.png"), use_container_width=True)
+    st.image(load_image("top_10_coach.png"), use_container_width=True)
+    st.image(load_image("top_5_disciplines.png"), use_container_width=True)
+    st.image(load_image("top_-5_disciplines.png"), use_container_width=True)
+    st.image(load_image("heatmap_athlete.png"), use_container_width=True)
 
 # Page Validation hypothèse
 elif page == "Validation hypothèse":
     st.header("Validation de l'hypothèse")
-    
-    st.image(load_image("nombre_athlete_medal.png"))
-    st.image(load_image("coach_vs_medals.png"))
-    st.image(load_image("individuel_vs_collectif.png"))
+
+    st.image(load_image("nombre_athlete_medal.png"), use_container_width=True)
+    st.image(load_image("coach_vs_medals.png"), use_container_width=True)
+    st.image(load_image("individuel_vs_collectif.png"), use_container_width=True)
